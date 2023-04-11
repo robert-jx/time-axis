@@ -1,19 +1,9 @@
 # time-axis
 
-## Project setup
-```
-npm install
-```
+Time sliding component based on Vue2
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+How to get started quickly?
 
-### Compiles and minifies for production
-```
-npm run build
-```
+1.npm install
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+2.npm run serve
