@@ -516,7 +516,7 @@ export default {
       item.width = this.conversionpx("width", item);
       item.changeTimeShow = !item.changeTimeShow;
       item.value = this.sonVal;
-      item.bg = this.adjustment(item.value);
+      item.bg = this.adjustment(code);
       this.iShow = null;
       this.submit();
     },
@@ -609,6 +609,7 @@ export default {
         width: 15px;
         font-size: 12px;
         color: #fff;
+        color: #303133;
       }
 
       .slide-box {
