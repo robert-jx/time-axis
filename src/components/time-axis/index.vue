@@ -477,7 +477,7 @@ export default {
         let obj = item;
         this.isTrue = true;
         this.domArr.forEach((v, index) => {
-          if (key != index && ((parseInt(obj.startH) < parseInt(v.endH)) || (parseInt(obj.endH)) > parseInt(v.startH))) {
+          if (key != index && this.verifyCorrectness(parseInt(obj.startH), parseInt(obj.endH), parseInt(v.startH), parseInt(v.endH))) {
             this.isTrue = false;
           }
         })
@@ -494,6 +494,16 @@ export default {
         this.operate(key, item);
       }
       this.submit();
+    },
+
+    verifyCorrectness(s1, e1, s2, e2) {
+      // 验证错误返回true，
+      // 验证成功返回false
+      console.log(s1, e1, s2, e2);
+      if ((s1 < s2 && e1 < s2) || (s1 > e2 && e1 > e2)) {
+        return false
+      }
+      else return true
     },
     // 按钮组-确定-验证逻辑
     operate(code, item) {
